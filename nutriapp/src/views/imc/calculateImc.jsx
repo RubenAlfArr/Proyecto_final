@@ -2,7 +2,7 @@ import {Form, Button, Table} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-import NavbarComponent from '../../components/navbarComponent.';
+import NavbarComponent from '../../components/navbarComponent';
 
 
 function CalculateImc() {

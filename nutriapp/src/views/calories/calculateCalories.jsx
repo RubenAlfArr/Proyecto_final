@@ -1,7 +1,7 @@
 import {Form, Button} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import NavbarComponent from '../../components/navbarComponent.';
+import NavbarComponent from '../../components/navbarComponent';
 
 function CalculateCalories() {
     const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import NavbarComponent from '../../components/navbarComponent.';
+import NavbarComponent from '../../components/navbarComponent';
 import { Card, CardGroup } from 'react-bootstrap';
 
 function Home() {
