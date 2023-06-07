@@ -1,5 +1,5 @@
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
-import './App.css'
+import './style.css'
 import Login from "./views/login/login";
 import Home from "./views/home/home"
 import Imc from "./views/imc/calculateImc"

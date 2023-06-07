@@ -1,8 +1,7 @@
 import {Form, Button} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-
-
+import NavbarComponent from '../../components/navbarComponent.';
 
 function CalculateCalories() {
     const navigate = useNavigate();
@@ -61,7 +60,10 @@ function CalculateCalories() {
     }
 
   return (
-        <div>
+    <div className='fondo'>
+    <NavbarComponent />
+    <div className='containe'>
+      <div className='marco-general'>
             <h1>Calculator of Calories</h1>
              
           <Form>
@@ -94,7 +96,7 @@ function CalculateCalories() {
                 </Form.Group>
     
                 <div style={{ marginTop: '16px' }}>
-                    <Button type="button" variant="primary" onClick={calculate} > Calcular Calories</Button>{' '}
+                    <Button type="button" variant="success" onClick={calculate} > Calcular Calories</Button>{' '}
                     <Button type="button" variant="danger" onClick={onExit}> Cancel </Button>
                 </div>
             </Form>
@@ -102,6 +104,8 @@ function CalculateCalories() {
         <br />
         {result && <p>Tu cuerpo necesita aproximadamente: {result} Kcal</p>}  
             
+        </div>
+        </div>
         </div>
       )
 }
