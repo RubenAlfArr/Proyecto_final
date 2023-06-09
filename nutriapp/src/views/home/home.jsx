@@ -19,8 +19,9 @@ function Home() {
     }
 
     return (
+    <div>
+    <NavbarComponent />
       <div className='fondo'>
-        <NavbarComponent />
         <div className='containe'>
           <div className='marco'>
             <h1>Home</h1>
@@ -61,6 +62,7 @@ function Home() {
             </div> 
           </div>
         </div>
+      </div>
       </div>
     );
   }

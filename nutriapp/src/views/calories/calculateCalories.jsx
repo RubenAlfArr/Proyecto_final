@@ -60,31 +60,32 @@ function CalculateCalories() {
     }
 
   return (
-    <div className='fondo'>
+    <div>
     <NavbarComponent />
+    <div className='fondo'>
     <div className='containe'>
       <div className='marco-general'>
             <h1>Calculator of Calories</h1>
              
           <Form>
-                <Form.Group controlId="old">
+                <Form.Group controlId="old" className="mb-3">
                     <Form.Label>Edad (años):</Form.Label>
                     <Form.Control type="text" value={age} onChange={(e) => setAge(e.target.value)}/>
                 </Form.Group>
-                <Form.Group controlId="weight">
+                <Form.Group controlId="weight" className="mb-3">
                     <Form.Label>Peso (kg):</Form.Label>
                     <Form.Control type="text" value={weight} onChange={(e) => setWeight(e.target.value)}/>
                 </Form.Group>
-                <Form.Group controlId="height">
+                <Form.Group controlId="height" className="mb-3">
                     <Form.Label>Altura (cm):</Form.Label>
                     <Form.Control type="text" value={height} onChange={(e) => setHeight(e.target.value)}/>
                 </Form.Group>
-                <div style={{ marginTop: '16px' }}>
-                    <Form.Label>Elige Sexo: </Form.Label>
+                <div style={{ marginTop: '16px' }} className="mb-3">
+                    <Form.Label>Elige Sexo:      </Form.Label>
                     <Form.Check inline type="radio" value="male" label="Masculino" name="radioGroup"/>
                     <Form.Check inline type="radio" value="female" label="Femenino" name="radioGroup"/> 
                 </div>
-                <Form.Group >
+                <Form.Group className="mb-3">
                     <Form.Label htmlFor="disabledSelect">Nivel de actividad fisica</Form.Label>
                     <Form.Select id="disabledSelect">
                         <option value="1">Poco o ninguno</option>
@@ -95,7 +96,7 @@ function CalculateCalories() {
                     </Form.Select>
                 </Form.Group>
     
-                <div style={{ marginTop: '16px' }}>
+                <div className="text-center" style={{ marginTop: '16px' }}>
                     <Button type="button" variant="success" onClick={calculate} > Calcular Calories</Button>{' '}
                     <Button type="button" variant="danger" onClick={onExit}> Cancel </Button>
                 </div>
@@ -104,6 +105,7 @@ function CalculateCalories() {
         <br />
         {result && <p>Tu cuerpo necesita aproximadamente: {result} Kcal</p>}  
             
+        </div>
         </div>
         </div>
         </div>

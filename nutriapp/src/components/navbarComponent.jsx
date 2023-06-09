@@ -16,7 +16,7 @@ function NavbarComponent() {
         </Nav>
       </Container>
     </Navbar>
-    <br />
+    
   </>
   )
 }

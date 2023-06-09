@@ -32,8 +32,10 @@ function CalculateImc() {
     //ok
 
   return (
-    <div className='fondo'>
+    <div>
     <NavbarComponent />
+    <div className='fondo'>
+    
     <div className='containe'>
       <div className='marco-general'>
         <h1>Calculator of IMC</h1>
@@ -41,41 +43,41 @@ function CalculateImc() {
         <Table responsive='sm'>
           <thead>
             <tr>
-              <th>IMC</th>
-              <th>Composición Corporal</th>
+              <th className="text-center">IMC</th>
+              <th className="text-center"> Composición Corporal</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Menos de 18.5</td>
-              <td>Desnutrición</td>
+              <td className="text-center">Menos de 18.5</td>
+              <td className="text-center">Desnutrición</td>
             </tr>
             <tr>
-              <td>18.5 - 24.9</td>
-              <td>En tu Peso</td>
+              <td className="text-center">18.5 - 24.9</td>
+              <td className="text-center">En tu Peso</td>
             </tr>
             <tr>
-              <td>25.0 - 29.9</td>
-              <td>Sobrepeso</td>
+              <td className="text-center">25.0 - 29.9</td>
+              <td className="text-center">Sobrepeso</td>
             </tr>
             <tr>
-              <td>Más de 30.0</td>
-              <td>Obesidad</td>
+              <td className="text-center">Más de 30.0</td>
+              <td className="text-center">Obesidad</td>
             </tr>
           </tbody>
         </Table>
   
         <Form>
-          <Form.Group controlId='weight'>
+          <Form.Group controlId='weight' className="mb-3">
             <Form.Label>Peso (kg):</Form.Label>
             <Form.Control type='text' value={weight} onChange={(e) => setWeight(e.target.value)} />
           </Form.Group>
-          <Form.Group controlId='height'>
+          <Form.Group controlId='height' className="mb-3">
             <Form.Label>Altura (cm):</Form.Label>
             <Form.Control type='text' value={height} onChange={(e) => setHeight(e.target.value)} />
           </Form.Group>
   
-          <div style={{ marginTop: '16px' }}>
+          <div style={{ marginTop: '16px' }} className="mb-3">
             <Button type='button' variant='success' onClick={calculate}>
               Calcular IMC
             </Button>{' '}
@@ -89,6 +91,7 @@ function CalculateImc() {
         {result && <p>Tu IMC es: {result}</p>}
       </div>
     </div>
+  </div>
   </div>
   )
 }
