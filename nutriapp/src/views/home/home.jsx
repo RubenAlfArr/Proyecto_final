@@ -18,13 +18,18 @@ function Home() {
         navigate('/nutrients');
     }
 
+    const handleRecipesClick = () => {
+      navigate('/recipes');
+  }
+
     return (
     <div>
     <NavbarComponent />
       <div className='fondo'>
+      <h1>Home</h1>
         <div className='containe'>
           <div className='marco'>
-            <h1>Home</h1>
+            
             <h1></h1>
             <div className='card-container'>  
               <CardGroup style={{background: 'transparent' }}>
@@ -56,6 +61,16 @@ function Home() {
                       Mira que nutrientes te vienen mejor
                     </Card.Text>
                     <Button variant="success" onClick={handleNutrientsClick}>Go</Button>
+                  </Card.Body>
+                </Card>
+                <Card  className='text-center' style={{ width: '18rem', background: 'transparent', border: 'none',  margin:'0 10px'}} >
+                  <Card.Img variant="top" src="https://www.cdc.gov/foodsafety/images/comms/features/GettyImages-1247930626-500px.jpg?_=00453" className='card-img' />
+                  <Card.Body>
+                    <Card.Title>Recipes</Card.Title>
+                    <Card.Text>
+                      Mira alguna recetas
+                    </Card.Text>
+                    <Button variant="success" onClick={handleRecipesClick}>Go</Button>
                   </Card.Body>
                 </Card>
               </CardGroup>

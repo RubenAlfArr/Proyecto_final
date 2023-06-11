@@ -5,6 +5,9 @@ import Home from "./views/home/home"
 import Imc from "./views/imc/calculateImc"
 import Calories from "./views/calories/calculateCalories"
 import Nutrients from "./views/nutrients/nutrients"
+import Profile from "./views/profile/profile"
+import Recipes from "./views/recipes/recipes"
+import EditProfile from "./views/profile/editProfile";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,18 @@ const router = createBrowserRouter([
   {
     path: "/nutrients",
     element: <Nutrients />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
+  {
+    path: "/recipes",
+    element: <Recipes />,
+  },
+  {
+    path: "/edit",
+    element: <EditProfile />,
   },
  
 ]);

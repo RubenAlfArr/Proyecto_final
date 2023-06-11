@@ -16,13 +16,21 @@ function CalculateImc() {
         if (weight && height) {
           const imc = weight / ((height / 100) ** 2);
           setResult(imc.toFixed(2)); //"toFixed(2)" method that round to 2 decimal" 
-        }
 
-        Swal.fire({
+          Swal.fire({
             title: 'Result',
              html: `${result}`,
              icon: 'success'
          })
+        }else{
+
+          Swal.fire({
+            title: 'Rellena los campos',
+             icon: 'info'
+          })
+        }
+
+       
       };
     
     const onExit = () => {
@@ -88,7 +96,9 @@ function CalculateImc() {
         </Form>
   
         <br />
+        <div className='marco-profile'>
         {result && <p>Tu IMC es: {result}</p>}
+        </div>
       </div>
     </div>
   </div>

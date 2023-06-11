@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import loginImage from "../../assets/login.png";
 import { useState } from 'react'
 import '../../style.css';
+import { useSelector } from 'react-redux';
 
 function Login() {
 
@@ -11,12 +12,15 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  const userXX = useSelector((state) => state.user.user);
+  const passwordXX = useSelector((state) => state.user.password);
+
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
       event.preventDefault();
   
-      if (login === 'ruben' && password === 'dam') {
+      if (login === userXX && password === passwordXX) {
         navigate('/home');
       } else {
         setError('Usuario y/o contraseña incorrectos');
