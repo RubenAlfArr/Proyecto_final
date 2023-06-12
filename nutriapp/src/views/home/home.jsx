@@ -1,7 +1,10 @@
-import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import NavbarComponent from '../../components/navbarComponent';
 import { Card, CardGroup } from 'react-bootstrap';
+import caloriesImage from "../../assets/calories.jpg";
+import imcImage from "../../assets/imc.jpg";
+import nutrientsImage from "../../assets/nutrients.jpg";
+import recipesImage from "../../assets/recipes.jpg";
 
 function Home() {
     const navigate = useNavigate();
@@ -26,57 +29,27 @@ function Home() {
     <div>
     <NavbarComponent />
       <div className='fondo'>
-      <h1>Home</h1>
         <div className='containe'>
           <div className='marco'>
-            
-            <h1></h1>
             <div className='card-container'>  
-              <CardGroup style={{background: 'transparent' }}>
+              <CardGroup style={{background: 'transparent', }}>
                 <Card className='text-center' style={{ width: '18rem', background: 'transparent',  border: 'none', margin:'0 10px'}}>
-                  <Card.Img variant="top" src="http://www.escueladisenosocial.org/wp-content/uploads/2015/06/balanza-677x300-672x300.jpg" className='card-img' />
-                  <Card.Body>
-                    <Card.Title>Calculate IMC</Card.Title>
-                    <Card.Text>
-                      Calcula tu índice de masa corporal
-                    </Card.Text>
-                    <Button variant="success" onClick={handleCalculateImcClick}>Go</Button>
-                  </Card.Body>
+                  <Card.Img style={{borderRadius: '40px' }} variant="top" src={imcImage} className='card-img' onClick={handleCalculateImcClick} />
                 </Card>
                 <Card className='text-center' style={{ width: '18rem', background: 'transparent',  border: 'none',  margin:'0 10px'}}>
-                  <Card.Img variant="top" src="https://www.masmusculo.com/blog/wp-content/uploads/2016/12/calcular.jpg" className='card-img' />
-                  <Card.Body>
-                    <Card.Title>Calculate Calories</Card.Title>
-                    <Card.Text>
-                      Calcula las Calorías que gastas
-                    </Card.Text>
-                    <Button variant="success" onClick={handleTotalCaloriasClick}>Go</Button>
-                  </Card.Body>
+                  <Card.Img style={{borderRadius: '40px' }} variant="top" src={caloriesImage} className='card-img' onClick={handleTotalCaloriasClick} />
                 </Card>
                 <Card  className='text-center' style={{ width: '18rem', background: 'transparent', border: 'none',  margin:'0 10px'}} >
-                  <Card.Img variant="top" src="https://www.cdc.gov/foodsafety/images/comms/features/GettyImages-1247930626-500px.jpg?_=00453" className='card-img' />
-                  <Card.Body>
-                    <Card.Title>Nutrients</Card.Title>
-                    <Card.Text>
-                      Mira que nutrientes te vienen mejor
-                    </Card.Text>
-                    <Button variant="success" onClick={handleNutrientsClick}>Go</Button>
-                  </Card.Body>
+                  <Card.Img  style={{borderRadius: '40px' }} variant="top" src={nutrientsImage} className='card-img' onClick={handleNutrientsClick} />
                 </Card>
                 <Card  className='text-center' style={{ width: '18rem', background: 'transparent', border: 'none',  margin:'0 10px'}} >
-                  <Card.Img variant="top" src="https://www.cdc.gov/foodsafety/images/comms/features/GettyImages-1247930626-500px.jpg?_=00453" className='card-img' />
-                  <Card.Body>
-                    <Card.Title>Recipes</Card.Title>
-                    <Card.Text>
-                      Mira alguna recetas
-                    </Card.Text>
-                    <Button variant="success" onClick={handleRecipesClick}>Go</Button>
-                  </Card.Body>
+                  <Card.Img style={{borderRadius: '40px' }} variant="top" src={recipesImage} className='card-img' onClick={handleRecipesClick} />
                 </Card>
               </CardGroup>
-            </div> 
+            
           </div>
         </div>
+      </div>
       </div>
       </div>
     );

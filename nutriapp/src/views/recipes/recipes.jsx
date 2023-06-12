@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import ListGroup from 'react-bootstrap/ListGroup';
 
+
 function Recipes() {
 
   const navigate = useNavigate();
@@ -100,7 +101,7 @@ function Recipes() {
                   )}
                 </div>
 
-                {/* {datosCocktail && (...)} virifica si tiene valor diferente de null, y si es asi lo ejecuta */}
+                {/* virifica si tiene valor diferente de null, y si es asi lo ejecuta */}
                 {selectedRecipe &&(
                 <Modal show={modalShow} onHide={()=>setModalShow(false)} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
                   

@@ -98,17 +98,27 @@
     position: relative;
 }
 
+.marco-general2{
+  border-radius: 10px;
+  justify-content: center;
+  display: flex;   /*permite utilizar propiedades para controlar dispocsicion y alineacion*/
+  flex-direction: column; /*columna, lo que significa que se apilan verticalmente en lugar de horizontalmente.*/
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
 .bold-text {
   font-weight: bold;
 }
 
 .margin{
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 .margin-x{
   margin-right: 30px;
-  margin-left: 80px;
+  margin-left: 30px;
 }
 
 .card-container {
@@ -121,5 +131,6 @@
 
 .card-img {
   object-fit: cover;
-  height: 200px;
+  
 }
+

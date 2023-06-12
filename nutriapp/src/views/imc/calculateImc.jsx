@@ -97,7 +97,9 @@ function CalculateImc() {
   
         <br />
         <div className='marco-profile'>
-        {result && <p>Tu IMC es: {result}</p>}
+          <div className="text-center">
+        {result && <p style={{ textAlign: 'center' }}>Tu IMC es: {result}</p>}
+        </div>
         </div>
       </div>
     </div>
